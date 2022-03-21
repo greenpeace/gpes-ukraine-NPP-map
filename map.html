@@ -5,23 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo map</title>
+    <title>Nuclear Ukraine map</title>
 </head>
 
 <body>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    
+    <!-- MAPA DE UCRANIA NUCLEAR -->
+    <link rel="preload" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" as="style" onload="this.rel='stylesheet'" />
+    <link rel="preload" href="css/styles.css" as="style" onload="this.rel='stylesheet'" />
     <div class="mapcontainer">
         <div id="ukraine_nuclear_map" style="width: 100%; height: 550px;"></div>
         <p class="mapfooter"><small>© 2022 - Greenpeace</small></p>
     </div>
-
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" defer></script>
-    
-    <script src="js/scripts.js"></script>
-
+    <script src="js/scripts.js" defer></script>
+    <!-- MAPA DE UCRANIA NUCLEAR -->
 </body>
 
 </html>
