@@ -108,9 +108,30 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }).addTo(osmap);
     }); */
 
-    // 10KM power plant - NO
-    /* fetch("jsonmaps/10km_radius_zone.json").then(res => res.json()).then(data => {
-        L.geoJson(data).addTo(osmap);
+    // 50KM power plant - NO
+    /* fetch("jsonmaps/50km_radius_zone.json").then(res => res.json()).then(data => {
+        L.geoJson(data, {
+            style: function (e) {
+                return {
+                    color: e.properties.fill ? e.properties.fill : "#AAFFAA",
+                    fillOpacity: e.properties["fill-opacity"] ? e.properties["fill-opacity"] : .3,
+                    weight: e.properties["stroke-width"] ? e.properties["stroke-width"] : 1
+                }
+            }
+        }).addTo(osmap);
+    }); */
+
+    // 100KM power plant - NO
+    /* fetch("jsonmaps/100km_radius_zone.json").then(res => res.json()).then(data => {
+        L.geoJson(data, {
+            style: function (e) {
+                return {
+                    color: e.properties.fill ? e.properties.fill : "#AAFFAA",
+                    fillOpacity: e.properties["fill-opacity"] ? e.properties["fill-opacity"] : .3,
+                    weight: e.properties["stroke-width"] ? e.properties["stroke-width"] : 1
+                }
+            }
+        }).addTo(osmap);
     }); */
 
     // NO - MUCHOS PUNTOS QUE NO SE QUE SON
