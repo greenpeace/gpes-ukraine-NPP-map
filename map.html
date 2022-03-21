@@ -41,9 +41,9 @@
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" defer></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    
 
-    
+
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function (event) {
@@ -52,13 +52,13 @@
             var containerEl = document.getElementById("map6");
             var elwidth = containerEl.offsetWidth;
             var mapheight = elwidth >= 550 ? 550 : 300;
-            var zoomvalue = elwidth >= 550 ? 4 : 3;
+            var zoomvalue = elwidth >= 550 ? 5 : 4;
 
             document.getElementById("map6").style.height = mapheight + "px";
 
             var osmap = L.map('map6', {
                 scrollWheelZoom: false
-            }).setView([50, 24], zoomvalue);
+            }).setView([50, 28], zoomvalue);
 
             L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
                 maxZoom: 18,
@@ -68,12 +68,59 @@
                 ext: 'jpg'
             }).addTo(osmap);
 
-           fetch("jsonmaps/Russia.json").then(res => res.json()).then(data => {
+            // Rusia map OK
+            fetch("jsonmaps/Russia.json").then(res => res.json()).then(data => {
                 L.geoJson(data).addTo(osmap);
             });
+
+            // Ukrania map OK
             fetch("jsonmaps/Ukraine.json").then(res => res.json()).then(data => {
                 L.geoJson(data).addTo(osmap);
             });
+
+            // Ukrain map plant - OK
+            fetch("jsonmaps/Ukraine_NPP_with_active_reactors.json").then(res => res.json()).then(data => {
+                L.geoJson(data).addTo(osmap);
+                // data.features.forEach((value)=>{ console.log(value)});
+            });
+
+            // Information on map - PUNTO NO SE QUE ES
+            fetch("jsonmaps/information-on-map.json").then(res => res.json()).then(data => {
+                L.geoJson(data).addTo(osmap);
+            });
+
+            // Chernobil power plant - OK
+            fetch("jsonmaps/Chornobyl_nuclear_power_plant.json").then(res => res.json()).then(data => {
+                L.geoJson(data).addTo(osmap);
+                data.features.forEach((value)=>{ console.log(value)});
+            });
+
+            // Zonas de Ucrania ocupadas - OK
+            fetch("jsonmaps/1703_3pm_EST_ISW.json").then(res => res.json()).then(data => {
+                L.geoJson(data).addTo(osmap);
+                data.features.forEach((value)=>{ console.log(value)});
+            });
+
+            // 10KM power plant - NO
+            /* fetch("jsonmaps/10km_radius_zone.json").then(res => res.json()).then(data => {
+                L.geoJson(data).addTo(osmap);
+            }); */
+
+            // NO - MUCHOS PUNTOS QUE NO SE QUE SON
+            /* fetch("jsonmaps/Incidents_within_150km_of_NPP.json").then(res => res.json()).then(data => {
+                L.geoJson(data).addTo(osmap);
+            }); */
+
+            // NO - MUCHOS PUNTOS QUE NO SE QUE SON
+            /* fetch("jsonmaps/Incidents_within_150km_of_NPP.json").then(res => res.json()).then(data => {
+                L.geoJson(data).addTo(osmap);
+            }); */
+
+            // Fotos en drive - NO
+            /* fetch("jsonmaps/Click_for_Zaporizhzhia_photos.json").then(res => res.json()).then(data => {
+                L.geoJson(data).addTo(osmap);
+            }); */
+
 
         });
     </script>
