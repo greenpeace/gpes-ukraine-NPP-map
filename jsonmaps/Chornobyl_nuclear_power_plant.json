@@ -17,7 +17,9 @@
           "cartodb_id": 1,
           "name": "Chernóbil",
           "operativa": "No. Está bajo control ruso desde el 24 de febrero.",
-          "reactors": "4 inactivos"
+          "reactors": "4 inactivos",
+          "active_reactors": 0,
+          "passive_reactors": 4
         }
       }
     ]

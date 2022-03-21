@@ -27,6 +27,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
         popupAnchor: [0, -15]
       });
 
+    var activeReactors = function (ammount) {  
+        var result = "";
+        for ( var i=0; i < ammount; i++){
+            result = result + '<img src="" alt="☢️" />';
+        }
+        return result;
+    };
+
+    var passiveReactors = function (ammount) {  
+        var result = "";
+        for ( var i=0; i < ammount; i++){
+            result = result + '<img src="" alt="🧐" />';
+        }
+        return result;
+    };
+
     // Rusia map OK
     fetch("jsonmaps/Russia.json").then(res => res.json()).then(data => {
         L.geoJson(data, {
@@ -62,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             onEachFeature: function (feature, layer) {
                 layer.bindPopup(
                     '<h3>' +  feature.properties.name + '</h3>' +
+                    '<p>' + activeReactors(feature.properties.active_reactors) + passiveReactors(feature.properties.passive_reactors) + '</p>' +
                     '<p><strong>Reactores:</strong> ' + feature.properties.reactors + '</p>' +
                     '<p><strong>Operativa:</strong> ' + feature.properties.operativa + '</p>'
                 );
@@ -79,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             onEachFeature: function (feature, layer) {
                 layer.bindPopup(
                     '<h3>' + feature.properties.name + '</h3>' +
+                    '<p>' + activeReactors(feature.properties.active_reactors) + passiveReactors(feature.properties.passive_reactors) + '</p>' +
                     '<p><strong>Reactores:</strong> ' + feature.properties.reactors + '</p>' +
                     '<p><strong>Operativa:</strong> ' + feature.properties.operativa + '</p>'
                 );
