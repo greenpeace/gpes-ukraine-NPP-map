@@ -27,3 +27,9 @@
 .importe_pago {
     color: red;
 }
+
+@media screen and (min-width: 760px) {
+    .mapcontainer {
+        width: 760px;
+    }
+}
