@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function (event) {
+// document.addEventListener("DOMContentLoaded", function (event) {
     /* global L, document */
 
     var containerEl = document.getElementById("ukraine_nuclear_map");
@@ -171,4 +171,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }); */
 
 
-});
+// });
