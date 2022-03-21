@@ -60,7 +60,7 @@
                 scrollWheelZoom: false
             }).setView([50, 28], zoomvalue);
 
-
+            // Map titles
             L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
                 maxZoom: 8,
                 attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
@@ -69,12 +69,28 @@
 
             // Rusia map OK
             fetch("jsonmaps/Russia.json").then(res => res.json()).then(data => {
-                L.geoJson(data).addTo(osmap);
+                L.geoJson(data, {
+                    style: function (e) {
+                        return {
+                            color: e.properties.fill ? e.properties.fill : "#ffffff",
+                            fillOpacity: e.properties["fill-opacity"] ? e.properties["fill-opacity"] : .3,
+                            weight: e.properties["stroke-width"] ? e.properties["stroke-width"] : 1
+                        }
+                    }
+                }).addTo(osmap);
             });
 
             // Ukrania map OK
             fetch("jsonmaps/Ukraine.json").then(res => res.json()).then(data => {
-                L.geoJson(data).addTo(osmap);
+                L.geoJson(data, {
+                    style: function (e) {
+                        return {
+                            color: e.properties.fill ? e.properties.fill : "#ffffff",
+                            fillOpacity: e.properties["fill-opacity"] ? e.properties["fill-opacity"] : .3,
+                            weight: e.properties["stroke-width"] ? e.properties["stroke-width"] : 1
+                        }
+                    }
+                }).addTo(osmap);
             });
 
             // Ukrain map plant - OK
@@ -96,7 +112,15 @@
 
             // Zonas de Ucrania ocupadas - OK
             fetch("jsonmaps/1703_3pm_EST_ISW.json").then(res => res.json()).then(data => {
-                L.geoJson(data).addTo(osmap);
+                L.geoJson(data, {
+                    style: function (e) {
+                        return {
+                            color: e.properties.fill ? e.properties.fill : "#ffffff",
+                            fillOpacity: e.properties["fill-opacity"] ? e.properties["fill-opacity"] : .3,
+                            weight: e.properties["stroke-width"] ? e.properties["stroke-width"] : 1
+                        }
+                    }
+                }).addTo(osmap);
                 data.features.forEach((value)=>{ console.log(value)});
             });
 
