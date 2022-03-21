@@ -36,22 +36,18 @@
 
     <div style="max-width: 760px; margin:auto;">
         <div id="map6" style="width: 100%; height: 550px; margin-bottom: 2em;"></div>
+        <p><small>© 2022 Greenpeace</small></p>
     </div>
 
-    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" defer></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
-    <p><small>© 2021 Greenpeace</small></p>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+
+    
 
     <script>
         document.addEventListener("DOMContentLoaded", function (event) {
             /* global L, document */
-
-            /*
-             * ATENCIÓN: Este mapa usa funcionalidades de ECMAScript 6
-             * Debes convertir a ES2015 en https://babeljs.io/en/repl
-             * O no funcionará en Internet Explorer
-             */
-
 
             var containerEl = document.getElementById("map6");
             var elwidth = containerEl.offsetWidth;
@@ -62,7 +58,7 @@
 
             var osmap = L.map('map6', {
                 scrollWheelZoom: false
-            }).setView([40.1, 10], zoomvalue);
+            }).setView([50, 24], zoomvalue);
 
             L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
                 maxZoom: 18,
@@ -71,6 +67,13 @@
                 id: 'mapbox.light',
                 ext: 'jpg'
             }).addTo(osmap);
+
+           fetch("jsonmaps/Russia.json").then(res => res.json()).then(data => {
+                L.geoJson(data).addTo(osmap);
+            });
+            fetch("jsonmaps/Ukraine.json").then(res => res.json()).then(data => {
+                L.geoJson(data).addTo(osmap);
+            });
 
         });
     </script>
