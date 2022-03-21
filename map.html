@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo map</title>
+</head>
+
+<body>
+
+    <style>
+        .leaflet-popup-content-wrapper,
+        .leaflet-popup-tip {
+            background-color: #fff;
+        }
+
+        .leaflet-popup-content-wrapper {
+            color: #212529;
+            font-family: "Work Sans", sans-serif;
+        }
+
+        .leaflet-popup-content p {
+            margin: 5px 0 5px 0;
+        }
+
+        .nombre_central {
+            font-weight: 700;
+        }
+
+        .importe_pago {
+            color: red;
+        }
+    </style>
+
+    <div style="max-width: 760px; margin:auto;">
+        <div id="map6" style="width: 100%; height: 550px; margin-bottom: 2em;"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+    <p><small>© 2021 Greenpeace</small></p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            /* global L, document */
+
+            /*
+             * ATENCIÓN: Este mapa usa funcionalidades de ECMAScript 6
+             * Debes convertir a ES2015 en https://babeljs.io/en/repl
+             * O no funcionará en Internet Explorer
+             */
+
+
+            var containerEl = document.getElementById("map6");
+            var elwidth = containerEl.offsetWidth;
+            var mapheight = elwidth >= 550 ? 550 : 300;
+            var zoomvalue = elwidth >= 550 ? 4 : 3;
+
+            document.getElementById("map6").style.height = mapheight + "px";
+
+            var osmap = L.map('map6', {
+                scrollWheelZoom: false
+            }).setView([40.1, 10], zoomvalue);
+
+            L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+                maxZoom: 18,
+                attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                subdomains: 'abcd',
+                id: 'mapbox.light',
+                ext: 'jpg'
+            }).addTo(osmap);
+
+        });
+    </script>
+
+</body>
+
+</html>
