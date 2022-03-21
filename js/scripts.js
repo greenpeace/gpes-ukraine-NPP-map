@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var nuclearIcon = L.icon({
         iconUrl: 'https://storage.googleapis.com/gpes-static/ucrania-nuclear-map/nuclear-32.png',
         iconSize: [32, 32],
-        iconAnchor: [16, 37],
-        popupAnchor: [0, -28]
+        iconAnchor: [16, 16],
+        popupAnchor: [0, -15]
       });
 
     // Rusia map OK
