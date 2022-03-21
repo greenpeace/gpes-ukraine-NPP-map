@@ -67,6 +67,14 @@
                 id: 'mapbox.light',
             }).addTo(osmap);
 
+            // Icons
+            var nuclearIcon = L.icon({
+                iconUrl: 'https://storage.googleapis.com/gpes-static/ucrania-nuclear-map/nuclear-32.png',
+                iconSize: [32, 32],
+                iconAnchor: [16, 37],
+                popupAnchor: [0, -28]
+              });
+
             // Rusia map OK
             fetch("jsonmaps/Russia.json").then(res => res.json()).then(data => {
                 L.geoJson(data, {
@@ -95,19 +103,27 @@
 
             // Ukrain map plant - OK
             fetch("jsonmaps/Ukraine_NPP_with_active_reactors.json").then(res => res.json()).then(data => {
-                L.geoJson(data).addTo(osmap);
-                // data.features.forEach((value)=>{ console.log(value)});
-            });
-
-            // Information on map - PUNTO NO SE QUE ES
-            fetch("jsonmaps/information-on-map.json").then(res => res.json()).then(data => {
-                L.geoJson(data).addTo(osmap);
+                L.geoJson(data, {
+                    pointToLayer: function (feature, latlng) {
+                        return L.marker(latlng, {icon: nuclearIcon});
+                    },
+                    onEachFeature: function (feature, layer) {
+                        layer.bindPopup(feature.properties.name);
+                    },
+                }).addTo(osmap);
+                
             });
 
             // Chernobil power plant - OK
             fetch("jsonmaps/Chornobyl_nuclear_power_plant.json").then(res => res.json()).then(data => {
-                L.geoJson(data).addTo(osmap);
-                data.features.forEach((value)=>{ console.log(value)});
+                L.geoJson(data, {
+                    pointToLayer: function (feature, latlng) {
+                        return L.marker(latlng, {icon: nuclearIcon});
+                    },
+                    onEachFeature: function (feature, layer) {
+                        layer.bindPopup(feature.properties.name);
+                    },
+                }).addTo(osmap);
             });
 
             // Zonas de Ucrania ocupadas - OK
@@ -121,8 +137,19 @@
                         }
                     }
                 }).addTo(osmap);
-                data.features.forEach((value)=>{ console.log(value)});
             });
+
+            // Information on map - PUNTO NO SE QUE ES
+            /* fetch("jsonmaps/information-on-map.json").then(res => res.json()).then(data => {
+                L.geoJson(data, {
+                    pointToLayer: function (feature, latlng) {
+                        return L.marker(latlng, {icon: nuclearIcon});
+                    },
+                    onEachFeature: function (feature, layer) {
+                        layer.bindPopup(feature.properties.name);
+                    },
+                }).addTo(osmap);
+            }); */
 
             // 10KM power plant - NO
             /* fetch("jsonmaps/10km_radius_zone.json").then(res => res.json()).then(data => {
