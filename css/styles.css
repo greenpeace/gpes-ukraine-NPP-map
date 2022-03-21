@@ -1,0 +1,29 @@
+.mapcontainer {
+    max-width: 760px; 
+    margin:auto;
+}
+.mapfooter {
+    margin-top: 0;
+    font-family: "Work Sans", sans-serif;
+}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    background-color: #fff;
+}
+
+.leaflet-popup-content-wrapper {
+    color: #212529;
+    font-family: "Work Sans", sans-serif;
+}
+
+.leaflet-popup-content p, .leaflet-popup-content h3  {
+    margin: 0px 0;
+}
+
+.nombre_central {
+    font-weight: 700;
+}
+
+.importe_pago {
+    color: red;
+}
