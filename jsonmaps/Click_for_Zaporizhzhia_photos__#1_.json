@@ -1,1 +1,50 @@
-{"type": "FeatureCollection", "features": [{"type":"Feature","geometry":{"type":"Point","coordinates":[34.9,47.55]},"properties":{"cartodb_id":4,"country":"UKR","country_lo":"Ukraine","name":"Zaporizhzhia","gppd_idnr":"WRI1005114","capacity_m":"6 × 3000 MW","latitude":47.5119,"longitude":34.5863,"primary_fu":"Nuclear","power_gene":"6 × 950 MW","other_fu_2":null,"reactors":6,"owner":"Energoatom","source":"Energoatom","url":"http://www.energoatom.kiev.ua/en/separated/npp_zp/","geolocatio":"GEODB","wepp_id":1013724,"operationa":6,"generation":null,"photo_url":"https://media.npr.org/assets/img/2022/03/10/zaporizhzhia-damage_custom-246828534621ac68810fa4581b6824b86f67d635-s2000-c85.webp","generati_2":0,"generati_3":0,"generati_4":0,"photo1_cap":"Aerial image of the six reactors at Zaporozhzhia nuclear plant, showing dry spent fuel storage area (centre) where two artillery shells found.\nSource: Satellite image ©2022 Maxar Technologies. Photo taken Nov. 2, 2019.","photo2_cap":"Heavy weapons fire from the rear of the Russian column flew in the direction of the Zaporozhzhia Unit 1 reactor building.\nCredit: Zaporizhzhia Nuclear Power Plant. Annotations by NPR.","photo3_cap":"Heavy weapons fire from the rear of the Russian column flew in the direction of the Zaporozhzhia Unit 1 reactor building.\nCredit: Zaporizhzhia Nuclear Power Plant. Annotations by NPR.","photo1":"https://drive.google.com/uc?id=1e0p7H9gEddCRyO9lWtLs94xzA7YVXyFq","photo2":"https://drive.google.com/uc?id=1He4XVi_Om00_lMiKxS2Pnf5Y2-8JLfXE","photo3":"https://drive.google.com/uc?id=1iTlhGSxFDuXQkCsbll_yRJO6pDI_DFUL","photo4":"https://drive.google.com/uc?id=1mm7h02g6EprbuwrK8ye5rq3htcp0cdo0","estimate_3":36992.5,"photo5":"https://drive.google.com/uc?id=1aSSuPkBnVCx_mLteUI53-r8AVCkY9wzz","photo6":"https://drive.google.com/uc?id=1xaWKJct-8JIsCLw1IotgOREMvskNWkcX","photo4_cap":"Above - hole in roof of walkway that runs parallel to the six reactor units.\nCredit: Energoatom/Telegram","photo5_cap":"Artillery shell on floor of walkway that runs parallel to the six reactors at Zaporozhzhia.\nCredit: Energoatom/Telegram","report":"The vulnerability of nuclear plants during military conflict: Lessons from Fukushima Daiichi, Focus on Zaporizhzhia, Ukraine","link":"https://www.greenpeace.org/static/planet4-international-stateless/2022/03/6805cdd2-nuclear-power-plant-vulnerability-during-military-conflict-ukraine-technical-briefing.pdf","photo6_cap":"View from walkway that runs parallel to six reactor units Zaporozhzhia, with reactor 2 building on right.\nCredit: Energoatom/Telegram"}}]}
+{
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [34.9, 47.55]
+        },
+        "properties": {
+            "cartodb_id": 4,
+            "country": "UKR",
+            "country_lo": "Ukraine",
+            "name": "Zaporizhzhia",
+            "gppd_idnr": "WRI1005114",
+            "capacity_m": "6 × 3000 MW",
+            "latitude": 47.5119,
+            "longitude": 34.5863,
+            "primary_fu": "Nuclear",
+            "power_gene": "6 × 950 MW",
+            "other_fu_2": null,
+            "reactors": 6,
+            "owner": "Energoatom",
+            "source": "Energoatom",
+            "url": "http://www.energoatom.kiev.ua/en/separated/npp_zp/",
+            "geolocatio": "GEODB",
+            "wepp_id": 1013724,
+            "operationa": 6,
+            "generation": null,
+            "photo_url": "https://media.npr.org/assets/img/2022/03/10/zaporizhzhia-damage_custom-246828534621ac68810fa4581b6824b86f67d635-s2000-c85.webp",
+            "generati_2": 0,
+            "generati_3": 0,
+            "generati_4": 0,
+            "photo1_cap": "Aerial image of the six reactors at Zaporozhzhia nuclear plant, showing dry spent fuel storage area (centre) where two artillery shells found.\nSource: Satellite image ©2022 Maxar Technologies. Photo taken Nov. 2, 2019.",
+            "photo2_cap": "Heavy weapons fire from the rear of the Russian column flew in the direction of the Zaporozhzhia Unit 1 reactor building.\nCredit: Zaporizhzhia Nuclear Power Plant. Annotations by NPR.",
+            "photo3_cap": "Heavy weapons fire from the rear of the Russian column flew in the direction of the Zaporozhzhia Unit 1 reactor building.\nCredit: Zaporizhzhia Nuclear Power Plant. Annotations by NPR.",
+            "photo1": "https://drive.google.com/uc?id=1e0p7H9gEddCRyO9lWtLs94xzA7YVXyFq",
+            "photo2": "https://drive.google.com/uc?id=1He4XVi_Om00_lMiKxS2Pnf5Y2-8JLfXE",
+            "photo3": "https://drive.google.com/uc?id=1iTlhGSxFDuXQkCsbll_yRJO6pDI_DFUL",
+            "photo4": "https://drive.google.com/uc?id=1mm7h02g6EprbuwrK8ye5rq3htcp0cdo0",
+            "estimate_3": 36992.5,
+            "photo5": "https://drive.google.com/uc?id=1aSSuPkBnVCx_mLteUI53-r8AVCkY9wzz",
+            "photo6": "https://drive.google.com/uc?id=1xaWKJct-8JIsCLw1IotgOREMvskNWkcX",
+            "photo4_cap": "Above - hole in roof of walkway that runs parallel to the six reactor units.\nCredit: Energoatom/Telegram",
+            "photo5_cap": "Artillery shell on floor of walkway that runs parallel to the six reactors at Zaporozhzhia.\nCredit: Energoatom/Telegram",
+            "report": "The vulnerability of nuclear plants during military conflict: Lessons from Fukushima Daiichi, Focus on Zaporizhzhia, Ukraine",
+            "link": "https://www.greenpeace.org/static/planet4-international-stateless/2022/03/6805cdd2-nuclear-power-plant-vulnerability-during-military-conflict-ukraine-technical-briefing.pdf",
+            "photo6_cap": "View from walkway that runs parallel to six reactor units Zaporozhzhia, with reactor 2 building on right.\nCredit: Energoatom/Telegram"
+        }
+    }]
+}
