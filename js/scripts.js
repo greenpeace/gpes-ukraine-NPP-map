@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             onEachFeature: function (feature, layer) {
                 layer.bindPopup(
                     '<h3>' +  feature.properties.name + '</h3>' +
-                    '<p>Reactores: ' + feature.properties.reactors + '</p>' +
+                    '<p><strong>Reactores:</strong> ' + feature.properties.reactors + '</p>' +
                     '<p><strong>Operativa:</strong> ' + feature.properties.operativa + '</p>'
                 );
             },
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             onEachFeature: function (feature, layer) {
                 layer.bindPopup(
                     '<h3>' + feature.properties.name + '</h3>' +
-                    '<p>Reactores: ' + feature.properties.reactors + '</p>' +
+                    '<p><strong>Reactores:</strong> ' + feature.properties.reactors + '</p>' +
                     '<p><strong>Operativa:</strong> ' + feature.properties.operativa + '</p>'
                 );
             },
