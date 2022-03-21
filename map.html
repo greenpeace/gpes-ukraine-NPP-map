@@ -13,6 +13,17 @@
     <!-- MAPA DE UCRANIA NUCLEAR -->
     <link rel="preload" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" as="style" onload="this.rel='stylesheet'" />
     <link rel="preload" href="css/styles.css" as="style" onload="this.rel='stylesheet'" />
+    <style>
+        .mapcontainer {
+            max-width: 760px; 
+            margin:auto;
+        }
+        @media screen and (min-width: 760px) {
+            .mapcontainer {
+                width: 760px;
+            }
+        }
+    </style>
     <div class="mapcontainer">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <div id="ukraine_nuclear_map" style="width: 100%; height: 550px;"></div>
