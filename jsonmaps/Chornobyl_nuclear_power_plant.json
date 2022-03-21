@@ -1,14 +1,24 @@
 {
     "type": "FeatureCollection",
-    "features": [{
+    "features": [
+      {
         "type": "Feature",
         "geometry": {
-            "type": "Point",
-            "coordinates": [30.224167, 51.272222]
+          "type": "Point",
+          "coordinates": [
+            30.224167,
+            51.272222
+          ]
         },
         "properties": {
-            "cartodb_id": 1,
-            "name": "Chornobyl"
+          "marker-color": "#7e7e7e",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cartodb_id": 1,
+          "name": "Chernóbil",
+          "operativa": "No. Está bajo control ruso desde el 24 de febrero.",
+          "reactors": "4 inactivos"
         }
-    }]
-}
+      }
+    ]
+  }

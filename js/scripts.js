@@ -61,8 +61,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
             },
             onEachFeature: function (feature, layer) {
                 layer.bindPopup(
-                    '<h3>' + '<a target="_blank" rel="noopener" href="' + feature.properties.url + '">' +  feature.properties.name + '</a></h3>' +
-                    '<p> Capacidad: ' + feature.properties.capacity_m + '</p>'
+                    '<h3>' +  feature.properties.name + '</h3>' +
+                    '<p>Reactores: ' + feature.properties.reactors + '</p>' +
+                    '<p><strong>Operativa:</strong> ' + feature.properties.operativa + '</p>'
                 );
             },
         }).addTo(osmap);
@@ -77,7 +78,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
             },
             onEachFeature: function (feature, layer) {
                 layer.bindPopup(
-                    '<h3>' + feature.properties.name + '</h3>'
+                    '<h3>' + feature.properties.name + '</h3>' +
+                    '<p>Reactores: ' + feature.properties.reactors + '</p>' +
+                    '<p><strong>Operativa:</strong> ' + feature.properties.operativa + '</p>'
                 );
             },
         }).addTo(osmap);
