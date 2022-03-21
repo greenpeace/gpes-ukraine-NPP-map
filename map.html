@@ -109,7 +109,10 @@
                         return L.marker(latlng, {icon: nuclearIcon});
                     },
                     onEachFeature: function (feature, layer) {
-                        layer.bindPopup(feature.properties.name);
+                        layer.bindPopup(
+                            '<h3>' + '<a target="_blank" rel="noopener" href="' + feature.properties.url + '">' +  feature.properties.name + '</a></h3>' +
+                            '<p> Capacidad: ' + feature.properties.capacity_m + '</p>'
+                        );
                     },
                 }).addTo(osmap);
                 
@@ -122,7 +125,9 @@
                         return L.marker(latlng, {icon: nuclearIcon});
                     },
                     onEachFeature: function (feature, layer) {
-                        layer.bindPopup(feature.properties.name);
+                        layer.bindPopup(
+                            '<h3>' + feature.properties.name + '</h3>'
+                        );
                     },
                 }).addTo(osmap);
             });
