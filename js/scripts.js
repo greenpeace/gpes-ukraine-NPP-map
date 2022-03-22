@@ -80,7 +80,7 @@
                     '<h3>' +  feature.properties.name + '</h3>' +
                     '<p>' + activeReactors(feature.properties.active_reactors) + passiveReactors(feature.properties.passive_reactors) + '</p>' +
                     '<p><strong>Reactores:</strong> ' + feature.properties.reactors + '</p>' +
-                    '<p><strong>Operativa:</strong> ' + feature.properties.operativa + '</p>'
+                    '<p><strong>¿Operativa?</strong> ' + feature.properties.operativa + '</p>'
                 );
             },
         }).addTo(osmap);
