@@ -30,7 +30,7 @@
     var activeReactors = function (ammount) {  
         var result = "";
         for ( var i=0; i < ammount; i++){
-            result = result + '<img src="" alt="☢️" />';
+            result = result + '<img src="img/activa.png" alt="+" />';
         }
         return result;
     };
@@ -38,7 +38,7 @@
     var passiveReactors = function (ammount) {  
         var result = "";
         for ( var i=0; i < ammount; i++){
-            result = result + '<img src="" alt="🧐" />';
+            result = result + '<img src="img/pasiva.png" alt="0" />';
         }
         return result;
     };
