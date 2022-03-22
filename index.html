@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Map demo</title>
+    <title>Nuclear Ukraine map</title>
 </head>
+
 <body>
 
-    <a href="map.html">Check map</a>
-    
+    <!-- MAPA DE UCRANIA NUCLEAR -->
+    <link rel="preload" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" as="style" onload="this.rel='stylesheet'" />
+    <link rel="preload" href="https://storage.googleapis.com/gpes-static/ucrania-nuclear-map/styles.css" as="style" onload="this.rel='stylesheet'" />
+    <div id="ukraine_nuclear_map" style="width: 100%; height: 550px;"></div>
+    <p><img src="https://storage.googleapis.com/gpes-static/ucrania-nuclear-map/ucrania-ocupada.png" style="vertical-align:middle; height: 11px; border: 2.5px solid rgb(169,102,100)" /> Ucrania ocupada</p>
+    <p class="mapfooter"><small>© 2022 - Greenpeace</small></p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" defer></script>
+    <script src="https://storage.googleapis.com/gpes-static/ucrania-nuclear-map/scripts.js?t4" defer></script>
+    <!-- MAPA DE UCRANIA NUCLEAR -->
+
 </body>
+
 </html>
