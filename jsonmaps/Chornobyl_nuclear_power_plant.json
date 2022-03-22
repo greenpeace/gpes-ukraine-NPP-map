@@ -17,7 +17,7 @@
           "cartodb_id": 1,
           "name": "Chernóbil",
           "operativa": "No. Está bajo control ruso desde el 24 de febrero.",
-          "reactors": "4 inactivos",
+          "reactors": "Los 4 reactores están desactivados desde el grave incidente de 1986 que causó la liberación de radiactividad dejando miles de víctimas.",
           "active_reactors": 0,
           "passive_reactors": 4
         }
