@@ -30,7 +30,7 @@
     var activeReactors = function (ammount) {  
         var result = "";
         for ( var i=0; i < ammount; i++){
-            result = result + '<img src="img/activa.png" alt="+" />';
+            result = result + '<img src="https://storage.googleapis.com/gpes-static/ucrania-nuclear-map/activa.png" alt="+" />';
         }
         return result;
     };
@@ -38,13 +38,13 @@
     var passiveReactors = function (ammount) {  
         var result = "";
         for ( var i=0; i < ammount; i++){
-            result = result + '<img src="img/pasiva.png" alt="0" />';
+            result = result + '<img src="https://storage.googleapis.com/gpes-static/ucrania-nuclear-map/pasiva.png" alt="0" />';
         }
         return result;
     };
 
     // Rusia map OK
-    fetch("jsonmaps/Russia.json").then(res => res.json()).then(data => {
+    fetch("https://storage.googleapis.com/gpes-static-cors/ucrain-nuclear-map/Russia.json").then(res => res.json()).then(data => {
         L.geoJson(data, {
             style: function (e) {
                 return {
@@ -57,7 +57,7 @@
     });
 
     // Ukrania map OK
-    fetch("jsonmaps/Ukraine.json").then(res => res.json()).then(data => {
+    fetch("https://storage.googleapis.com/gpes-static-cors/ucrain-nuclear-map/Ukraine.json").then(res => res.json()).then(data => {
         L.geoJson(data, {
             style: function (e) {
                 return {
@@ -70,7 +70,7 @@
     });
 
     // Ukrain map plant - OK
-    fetch("jsonmaps/Ukraine_NPP_with_active_reactors.json").then(res => res.json()).then(data => {
+    fetch("https://storage.googleapis.com/gpes-static-cors/ucrain-nuclear-map/Ukraine_NPP_with_active_reactors.json").then(res => res.json()).then(data => {
         L.geoJson(data, {
             pointToLayer: function (feature, latlng) {
                 return L.marker(latlng, {icon: nuclearIcon});
@@ -88,7 +88,7 @@
     });
 
     // Chernobil power plant - OK
-    fetch("jsonmaps/Chornobyl_nuclear_power_plant.json").then(res => res.json()).then(data => {
+    fetch("https://storage.googleapis.com/gpes-static-cors/ucrain-nuclear-map/Chornobyl_nuclear_power_plant.json?1").then(res => res.json()).then(data => {
         L.geoJson(data, {
             pointToLayer: function (feature, latlng) {
                 return L.marker(latlng, {icon: nuclearIcon});
@@ -105,16 +105,18 @@
     });
 
     // Zonas de Ucrania ocupadas - OK
-    fetch("jsonmaps/1703_3pm_EST_ISW.json").then(res => res.json()).then(data => {
-        L.geoJson(data, {
-            style: function (e) {
-                return {
-                    color: e.properties.fill ? e.properties.fill : "#ffffff",
-                    fillOpacity: e.properties["fill-opacity"] ? e.properties["fill-opacity"] : .3,
-                    weight: e.properties["stroke-width"] ? e.properties["stroke-width"] : 1
+    fetch("https://storage.googleapis.com/gpes-static-cors/ucrain-nuclear-map/1703_3pm_EST_ISW.json").then(res => res.json()).then(data => {
+        setTimeout(function(){
+            L.geoJson(data, {
+                style: function (e) {
+                    return {
+                        color: e.properties.fill ? e.properties.fill : "#ffffff",
+                        fillOpacity: e.properties["fill-opacity"] ? e.properties["fill-opacity"] : .3,
+                        weight: e.properties["stroke-width"] ? e.properties["stroke-width"] : 1
+                    }
                 }
-            }
-        }).addTo(osmap);
+            }).addTo(osmap);
+        }, 2000);
     });
 
     // Information on map - PUNTO NO SE QUE ES
