@@ -17,7 +17,7 @@
 }
 
 .leaflet-popup-content p, .leaflet-popup-content h3  {
-    margin: 0px 0;
+    margin: 5px 0 5px 0;
 }
 
 .nombre_central {
