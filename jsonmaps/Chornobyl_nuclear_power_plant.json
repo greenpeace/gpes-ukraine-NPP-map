@@ -16,10 +16,14 @@
           "marker-symbol": "",
           "cartodb_id": 1,
           "name": "Chernóbil",
-          "operativa": "No. Está bajo control ruso desde el 24 de febrero.",
-          "reactors": "Los 4 reactores están desactivados desde el grave incidente de 1986 que causó la liberación de radiactividad dejando miles de víctimas.",
+          "operativa": "No.",
+          "reactors": "4 inactivos de RBMK-1000, reactores de agua en ebullición que utilizan uranio ligeramente enriquecido.",
           "active_reactors": 0,
-          "passive_reactors": 4
+          "passive_reactors": 4,
+          "propietario": "Gobierno de Ucrania",
+          "comentario" : "Los 4 reactores están desactivados desde el grave incidente de 1986 que causó la liberación de radiactividad dejando miles de víctimas.",
+          "control": "Está bajo control ruso desde el 24 de febrero."
+
         }
       }
     ]

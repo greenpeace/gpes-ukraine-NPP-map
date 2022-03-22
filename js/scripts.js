@@ -70,7 +70,7 @@
     });
 
     // Ukrain map plant - OK
-    fetch("https://storage.googleapis.com/gpes-static-cors/ucrain-nuclear-map/Ukraine_NPP_with_active_reactors.json").then(res => res.json()).then(data => {
+    fetch("https://storage.googleapis.com/gpes-static-cors/ucrain-nuclear-map/Ukraine_NPP_with_active_reactors.json?1").then(res => res.json()).then(data => {
         L.geoJson(data, {
             pointToLayer: function (feature, latlng) {
                 return L.marker(latlng, {icon: nuclearIcon});
@@ -80,7 +80,10 @@
                     '<h3>' +  feature.properties.name + '</h3>' +
                     '<p>' + activeReactors(feature.properties.active_reactors) + passiveReactors(feature.properties.passive_reactors) + '</p>' +
                     '<p><strong>Reactores:</strong> ' + feature.properties.reactors + '</p>' +
-                    '<p><strong>¿Operativa?</strong> ' + feature.properties.operativa + '</p>'
+                    '<p><strong>¿Operativa?</strong> ' + feature.properties.operativa + '</p>' +
+                    '<p><strong>Proprietario:</strong> ' + feature.properties.propietario + '</p>' +
+                    '<p>' +  feature.properties.comentario + '</p>' + 
+                    '<p style="color:red">' +  feature.properties.control + '</p>'
                 );
             },
         }).addTo(osmap);
@@ -88,7 +91,7 @@
     });
 
     // Chernobil power plant - OK
-    fetch("https://storage.googleapis.com/gpes-static-cors/ucrain-nuclear-map/Chornobyl_nuclear_power_plant.json?1").then(res => res.json()).then(data => {
+    fetch("https://storage.googleapis.com/gpes-static-cors/ucrain-nuclear-map/Chornobyl_nuclear_power_plant.json?3").then(res => res.json()).then(data => {
         L.geoJson(data, {
             pointToLayer: function (feature, latlng) {
                 return L.marker(latlng, {icon: nuclearIcon});
@@ -98,7 +101,10 @@
                     '<h3>' + feature.properties.name + '</h3>' +
                     '<p>' + activeReactors(feature.properties.active_reactors) + passiveReactors(feature.properties.passive_reactors) + '</p>' +
                     '<p><strong>Reactores:</strong> ' + feature.properties.reactors + '</p>' +
-                    '<p><strong>Operativa:</strong> ' + feature.properties.operativa + '</p>'
+                    '<p><strong>¿Operativa?</strong> ' + feature.properties.operativa + '</p>' +
+                    '<p><strong>Proprietario:</strong> ' + feature.properties.propietario + '</p>' +
+                    '<p>' +  feature.properties.comentario + '</p>' + 
+                    '<p style="color:red">' +  feature.properties.control + '</p>'
                 );
             },
         }).addTo(osmap);
